@@ -4,8 +4,12 @@ void llenararray(int a[], int n){
     for(int i=0; i< n; i++) {
         int num;
         do {
-            printf(" ingresarnumero (debe ser positivo )[%d]:"i+1);
+            printf(" ingresarnumero (debe ser positivo )[%d]:",i +1);
             scanf("%d", &num);
+                 
+    
+    while (getchar() != '\n'); 
+
             if(num<= 0){
                 printf("debe ser positivo intenta denuevo\n ");
             }
@@ -35,11 +39,14 @@ int main(void) {
         printf("elige una opcion\n");
         
     scanf("%d", &opcion);
+    while (getchar() != '\n'); 
+
     
        switch (opcion)
        {
        case 1:
-        printf("llenando  lista\n");
+        printf("llenando lista\n");
+        llenararray(arreglo, 10);
         break;
 
         case 2:
@@ -69,7 +76,7 @@ int main(void) {
         
 
         
-        opcion = 0; 
+        
     } while (opcion != 5); 
 
     return 0;
