@@ -23,7 +23,12 @@ void llenararray(int a[], int n){
 
 }
 
-
+void mostrararray(int a[],int n){
+    for (int i = 0; i < n; i++){
+    printf("%d\n", a[i]);
+    }
+printf("\n");
+}
 
 
 int main(void) {
@@ -51,6 +56,7 @@ int main(void) {
 
         case 2:
         printf("mostrando lista\n");
+        mostrararray(arreglo,10);
         break;
 
         case 3:
