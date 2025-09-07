@@ -1,6 +1,29 @@
 #include <stdio.h>
 
+void llenararray(int a[], int n){
+    for(int i=0; i< n; i++) {
+        int num;
+        do {
+            printf(" ingresarnumero (debe ser positivo )[%d]:"i+1);
+            scanf("%d", &num);
+            if(num<= 0){
+                printf("debe ser positivo intenta denuevo\n ");
+            }
+
+        } while (num <= 0);
+        {
+            a[i] = num;
+        }
+        
+    }
+
+}
+
+
+
+
 int main(void) {
+    int arreglo[10];
  int opcion;
     do {
         printf("\n  menu\n");
