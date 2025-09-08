@@ -54,6 +54,25 @@ void ordenaracendente(int a[], int n){
     
 }
 
+void ordenardecendente(int a[], int n){
+    for (int i = 0; i < n-1; i++){
+        for (int j = 0; j < n-i-1; j++)
+        {
+            if (a[j]<a[j+1]){
+            int temp=a[j];
+            a[j]= a[j+1];
+            a[j+1]=temp;
+            
+                
+            
+            }
+        }
+        
+    }
+    printf("lista ordenada de forma decendente\n");
+}
+
+
 
 int main(void) {
     int arreglo[10];
@@ -86,10 +105,12 @@ int main(void) {
         case 3:
         printf("ordenando acendente\n");
         ordenaracendente(arreglo,10);
+        mostrararray(arreglo,10);
         break;
        
         case 4:
         printf("ordenando decendente\n");
+        ordenardecendente(arreglo,10);
         break;
 
         case 5:
